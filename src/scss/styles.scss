@@ -1,0 +1,13 @@
+@use './variables' as *;
+@use './fonts';
+
+@use './components/button';
+@use './components/footer';
+@use './components/header';
+@use './components/movie-card';
+@use  './components/nav';
+
+body {
+    background-color: $backgroundColor;
+    font-family: 'Raleway', sans-serif;
+}

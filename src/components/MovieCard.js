@@ -1,0 +1,1 @@
+// For each card on the homepage + on the favourite page
