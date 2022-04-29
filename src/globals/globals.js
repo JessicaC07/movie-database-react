@@ -7,3 +7,7 @@ export const appTitle = 'Film Festival';
 // useEffect(() => {
 //     document.title = `${appTitle} - NameOfThePage`;
 // }, []);
+
+
+const API_KEY = '7b448dca9bed629e504ae4372fb2e110';
+export { API_KEY };

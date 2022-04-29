@@ -1,16 +1,16 @@
 @use './variables' as *;
 @use './fonts';
 
-@use './components/button';
 @use './components/footer';
 @use './components/header';
 @use './components/movie-card';
 @use  './components/nav';
 
 @use './pages/favourites';
-
+@use './pages/page-home';
 body {
     background-color: $backgroundColor;
     font-family: 'Raleway', sans-serif;
     color: $textColor;
+    line-height: 1.4;
 }

@@ -1,0 +1,89 @@
+@use '../variables' as *;
+
+.card-container {
+
+    padding: 2rem;
+
+    .movie-poster {
+        position: relative;
+
+        img {
+            height: auto;
+            width: 100%;
+            opacity: 0.3;
+        }
+
+        .info {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            display: flex;
+            flex-wrap: wrap;
+
+            .top-text-container {
+
+                margin: .5rem 1rem;
+                .top-card {
+                    display: flex;
+                    flex-grow: 1;
+                    justify-content: space-between;
+                    align-items: center;
+    
+                    .rating {
+                        border: 1px solid $textColor;
+                        padding: .1rem .4rem;
+                    }
+                }
+    
+                .text {
+                    display: flex;
+                    flex-direction: column;
+                    text-align: left;
+    
+                    h1 {
+                        margin: 0;
+                        line-height: 1;
+                        font-size: 1.5rem;
+                    }
+                    p {
+                        font-size: 0.8rem;
+                    }
+                }
+            }
+            
+            .button-container {
+                display: block;
+                margin: 0 auto;
+
+                .button {
+                    border: none;
+                    font-family: 'Raleway';
+                    font-style: normal;
+                    font-weight: 300;
+                    text-transform: uppercase;
+                    background-color: $brandColor;
+                    padding: .5rem;
+
+                    a {
+                        text-decoration: none;
+                        color: $textColor;
+
+                    }
+                }
+            }
+
+            .like-icon {
+                height: 2rem;
+                width: 2rem;
+                opacity: 1;
+            }
+        }
+    }
+}
+
+  // on desktop only
+            // &:hover {
+            //     background-color: $accentColor;
+            //     color: $backgroundColor;
+            // }
