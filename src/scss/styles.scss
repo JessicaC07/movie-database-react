@@ -7,6 +7,8 @@
 @use './components/movie-card';
 @use  './components/nav';
 
+@use './pages/favourites';
+
 body {
     background-color: $backgroundColor;
     font-family: 'Raleway', sans-serif;
