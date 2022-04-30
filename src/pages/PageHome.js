@@ -9,15 +9,16 @@ function PageHome() {
     useEffect(() => {
         const fetchMovies = async () => {
             
-            const res = await fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=en-US&page=1`)
+            fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=en-US&page=1`)
 
-            if(res.ok) {
-                const data = await res.json();
+            .then(response => response.json())
+            .then(data => {
                 const first12Movies = data.results.splice(0,12)
                 setMoviesToDisplay(first12Movies);
-            } else {
-                alert('Could not load data');
-            }
+            })
+            .catch((error) => {
+                alert('Error: ' + error);
+            })
         }
 
         fetchMovies();
@@ -25,13 +26,11 @@ function PageHome() {
     console.log(moviesToDisplay)
 
     return (
-        <div>
-            <div>
-                {/* (moviesToDisplay !== false) && > no need as start with [] */}
-                {
-                    moviesToDisplay.map(movieFromArray => <MovieCard key={movieFromArray.id} movie={movieFromArray} />)
-                }
-            </div>
+        <div className="grid">
+            {/* (moviesToDisplay !== false) && > no need as start with [] */}
+            {
+                moviesToDisplay.map(movieFromArray => <MovieCard key={movieFromArray.id} movie={movieFromArray} />)
+            }
         </div>
     )
 }

@@ -4,13 +4,19 @@
 
     padding: 2rem;
 
+    @media (min-width: $breakpoint400) {
+        & {
+            padding: 3.5rem;
+        }
+    }
+
     .movie-poster {
         position: relative;
 
         img {
             height: auto;
             width: 100%;
-            opacity: 0.3;
+            filter: brightness(30%);
         }
 
         .info {
@@ -19,11 +25,12 @@
             width: 100%;
             top: 0;
             display: flex;
-            flex-wrap: wrap;
+            flex-direction: column;
 
             .top-text-container {
-
+                flex-grow: 1;
                 margin: .5rem 1rem;
+
                 .top-card {
                     display: flex;
                     flex-grow: 1;
@@ -45,9 +52,23 @@
                         margin: 0;
                         line-height: 1;
                         font-size: 1.5rem;
+
+                        @media (min-width: $breakpoint400) {
+                            & {
+                                margin: 0.6rem 0;
+                                font-size: 1.8rem;
+                            }
+                        }
                     }
+
                     p {
                         font-size: 0.8rem;
+
+                        @media (min-width: $breakpoint400) {
+                            & {
+                                font-size: 1rem;
+                            }
+                        }
                     }
                 }
             }
@@ -55,6 +76,13 @@
             .button-container {
                 display: block;
                 margin: 0 auto;
+                margin-bottom: 2rem;
+
+                @media (min-width: $breakpoint400) {
+                    & {
+                        margin-bottom: 3rem;  
+                    }
+                }
 
                 .button {
                     border: none;
@@ -65,9 +93,31 @@
                     background-color: $brandColor;
                     padding: .5rem;
 
+                    @media (min-width: $breakpoint400) {
+                        & {
+                            padding: .6rem;
+                        }
+                    }
+
+                    @media (min-width: $breakpoint520) {
+                        &:hover {
+                            background-color: $accentColor;
+                        
+                            a {
+                                color: $backgroundColor;
+                            }
+                        }
+                    }
+
                     a {
                         text-decoration: none;
                         color: $textColor;
+
+                        @media (min-width: $breakpoint400) {
+                            & {
+                                font-size: 1;
+                            }
+                        }
 
                     }
                 }
@@ -77,13 +127,8 @@
                 height: 2rem;
                 width: 2rem;
                 opacity: 1;
+                filter: brightness(100%);
             }
         }
     }
 }
-
-  // on desktop only
-            // &:hover {
-            //     background-color: $accentColor;
-            //     color: $backgroundColor;
-            // }

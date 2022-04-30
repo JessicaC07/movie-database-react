@@ -5,12 +5,23 @@ import { Link } from 'react-router-dom';
 
 function MovieCard({movie}) {
 
+    const numberCharacter = 180;
+
+    function movieOverview(movieOverview){
+        if (movieOverview.length > numberCharacter) {
+            return movieOverview.substring(0,numberCharacter) + "...";
+        } else {
+            return movieOverview;
+        }
+    }
+
   return (
     <div className="card-container">
         <div className="movie-poster">
             {movie.poster_path === false ?
                 <img src={noPoster} alt="empty movie poster" /> :
-                <img src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`} alt={movie.title} />}
+                <img className="movie-poster-image"
+                src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`} alt={movie.title} />}
 
             
             <div className="info">
@@ -24,7 +35,7 @@ function MovieCard({movie}) {
                     <div className="text">
                         <p>{new Date(movie.release_date).toDateString()}</p>
                         <h1>{movie.title}</h1>
-                        <p maxlength="2">{movie.overview}</p>
+                        <p>{movieOverview(movie.overview)}</p>
                     </div>
                 </div>
 

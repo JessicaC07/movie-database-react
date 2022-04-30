@@ -1,0 +1,168 @@
+@use '../variables' as *;
+
+@media (min-width: $breakpoint520){
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 3.5rem;
+        gap: 1em;
+
+        @media (min-width: $breakpoint800) {
+            & {
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+        }
+
+        @media (min-width: $breakpoint1000) {
+            & {
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+            }
+        }
+
+        @media (min-width: $breakpoint1500) {
+            & {
+                grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+            }
+        }
+
+        @media (min-width: $breakpoint1800) {
+            & {
+                grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+            }
+        }
+    }
+    
+    .card-container {
+
+        padding: 0;
+        margin-bottom: 2rem;
+
+        .movie-poster {
+            .info {
+
+                .like-icon {
+                    height: 1.5rem;
+                    width: 1.5rem;
+
+                }
+
+                .top-text-container {
+                    .top-card {
+                        .rating {
+                            font-size: .7rem;
+                        }
+                    }
+
+                    .text {
+                        h1 {
+                            margin: 0;
+                            line-height: 1;
+                            font-size: 1.2rem;
+
+                            @media (min-width: $breakpoint520) {
+                                & {
+                                    font-size: .8rem;
+                                }
+                            }
+
+                            @media (min-width: $breakpoint1300) {
+                                & {
+                                    font-size: 1.5rem;
+                                    margin: 0.7rem 0;
+                                }
+                            }
+
+                        }
+                        p {
+                            font-size: .6rem;
+
+                            @media (min-width: $breakpoint520) {
+                                & {
+                                    font-size: 0.59rem;
+                                }
+                            }
+
+                            @media (min-width: $breakpoint600) {
+                                & {
+                                    font-size: 0.9rem;
+                                }
+                            }
+
+                            @media (min-width: $breakpoint800) {
+                                & {
+                                    font-size: 0.80rem;
+                                }
+                            }
+
+                            @media (min-width: $breakpoint1000) {
+                                & {
+                                    font-size: 0.7rem;
+                                }
+                            }
+
+                            @media (min-width: $breakpoint1300) {
+                                & {
+                                    font-size: 1rem;
+                                }
+                            }
+
+                            @media (min-width: $breakpoint1800) {
+                                & {
+                                    font-size: 0.9rem;
+                                }
+                            }
+                        }
+                    }
+                }    
+
+                .button-container {
+                    margin-bottom: 1.5rem;
+                    .button {
+                        padding: .5rem;
+
+                        @media (min-width: $breakpoint520) {
+                            & {
+                                padding: .3rem;
+                            }
+                        }
+
+                        @media (min-width: $breakpoint600) {
+                            & {
+                                padding: .5rem;
+                            }
+                        }
+
+                        @media (min-width: $breakpoint1800) {
+                            & {
+                                padding: .6rem;
+                            }
+                        }
+    
+                        a {
+                            font-size: 0.7rem;
+
+                            @media (min-width: $breakpoint520) {
+                                & {
+                                    font-size: 0.6rem;
+                                }
+                            }
+
+                            @media (min-width: $breakpoint600) {
+                                & {
+                                    font-size: 0.8rem;
+                                }
+                            }
+
+                            @media (min-width: $breakpoint1800) {
+                                & {
+                                    font-size: 0.9rem;
+                                }
+                            }
+    
+                        }
+                    }
+                }
+            }
+        }
+    }       
+}
