@@ -1,10 +1,12 @@
 @use './variables' as *;
 @use './fonts';
+@use './normalize-fwd.scss';
 
 @use './components/footer';
 @use './components/header';
 @use './components/movie-card';
 @use  './components/nav';
+@use './components/single-movie';
 
 @use './pages/favourites';
 @use './pages/page-home';

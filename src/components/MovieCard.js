@@ -21,7 +21,8 @@ function MovieCard({movie}) {
             {movie.poster_path === false ?
                 <img src={noPoster} alt="empty movie poster" /> :
                 <img className="movie-poster-image"
-                src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`} alt={movie.title} />}
+                src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`} alt={movie.title} />
+            }
 
             
             <div className="info">
@@ -40,7 +41,7 @@ function MovieCard({movie}) {
                 </div>
 
                 <div className="button-container">
-                    <button className="button"><Link to={'/'}>Learn More</Link></button>
+                    <button className="button"><Link to={`/movie/${movie.id}`}>Learn More</Link></button>
                 </div>
             </div>
         </div>
