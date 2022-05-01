@@ -1,5 +1,7 @@
 @use '../variables' as *;
 
+// Grid movies (dropdown menu below)
+
 @media (min-width: $breakpoint520){
     .grid {
         display: grid;
@@ -165,4 +167,41 @@
             }
         }
     }       
+}
+
+// Dropdown menu
+
+.dropdown {
+
+    text-align: right;
+    padding-top: 2rem;
+    padding-right: 2rem;
+
+    select {
+        font-family: 'Raleway', 'sans-serif';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 0.8rem;
+        background-color: transparent;
+        color: $textColor;
+    }
+
+    label {
+        font-size: 0.8rem;
+    }
+
+    @media (min-width: $breakpoint400) {
+        & {
+            padding-right: 3.5rem;
+            padding-top: 3.5rem;
+        }
+
+        & select {
+            font-size: 1rem;
+        }
+
+        & label {
+            font-size: 1rem;
+        }
+    }
 }

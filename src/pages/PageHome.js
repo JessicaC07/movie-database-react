@@ -1,15 +1,22 @@
 import MovieCard from "../components/MovieCard";
 import { useEffect, useState } from 'react';
 import {API_KEY } from '../globals/globals';
+import { appTitle } from "../globals/globals";
 
 function PageHome() {
 
+    useEffect(() => {
+        document.title = `${appTitle} - Home`;
+    }, []);
+
+
     const [moviesToDisplay, setMoviesToDisplay] = useState([]);
+    const [filter, setFilter] = useState('popular');
 
     useEffect(() => {
         const fetchMovies = async () => {
             
-            fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=en-US&page=1`)
+            fetch(`https://api.themoviedb.org/3/movie/${filter}?api_key=${API_KEY}&language=en-US&page=1`)
 
             .then(response => response.json())
             .then(data => {
@@ -22,15 +29,30 @@ function PageHome() {
         }
 
         fetchMovies();
-    }, [])
-    console.log(moviesToDisplay)
+    }, [filter])
+    
+
+    function filterChange(e) {
+        setFilter(e.target.value) // get the selected option value
+    }
 
     return (
-        <div className="grid">
-            {/* (moviesToDisplay !== false) && > no need as start with [] */}
-            {
-                moviesToDisplay.map(movieFromArray => <MovieCard key={movieFromArray.id} movie={movieFromArray} />)
-            }
+        <div>
+            <div className="dropdown">
+                <label htmlFor="display-by">Display by : </label>
+                <select id="display-by" onChange={filterChange}>
+                    <option value="popular">Popular</option>
+                    <option value="top_rated">Top Rated</option>
+                    <option value="upcoming">Upcoming</option>
+                    <option value="now_playing">Now Playing</option>
+                </select>
+            </div>
+            <div className="grid">
+                {/* (moviesToDisplay !== false) && > no need as start with [] */}
+                {
+                    moviesToDisplay.map(movieFromArray => <MovieCard key={movieFromArray.id} movie={movieFromArray} />)
+                }
+            </div>
         </div>
     )
 }
