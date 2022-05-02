@@ -10,9 +10,20 @@
 
 @use './pages/favourites';
 @use './pages/page-home';
+
 body {
     background-color: $backgroundColor;
     font-family: 'Raleway', sans-serif;
     color: $textColor;
     line-height: 1.4;
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+    main {
+        flex: 1;
+    }
 }

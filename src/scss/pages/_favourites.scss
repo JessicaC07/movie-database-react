@@ -2,7 +2,7 @@
 
 .favourite-content{
 
-    margin: 50% 10%;
+    padding: 2rem;
 
     h1, p {
         text-align: center;
@@ -21,4 +21,10 @@
         padding: 0 .2rem;
        
     }
+
+
+    @media (min-width: $breakpoint520) {
+        padding: 3.5rem;
+    }
+        
 }

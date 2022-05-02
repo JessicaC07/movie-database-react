@@ -1,6 +1,10 @@
 function Footer() {
   return (
-    <div>Footer To Be Created</div>
+
+  <footer>
+    &copy; Jessica Laporte &amp; Marko Vukmirovic - For Educational Purpose 2022
+  </footer>
+
   )
 }
 export default Footer

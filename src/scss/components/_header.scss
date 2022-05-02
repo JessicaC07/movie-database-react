@@ -1,0 +1,30 @@
+@use "../variables" as *;
+
+
+header {
+    
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+
+    @media (min-width: $breakpoint520) {
+        position: initial;
+        padding: 2rem 3.5rem;
+    }
+
+    @media (min-width: $breakpoint800) {
+        height: 4rem;
+        padding: 2rem 3.5rem;
+    }
+
+    img {
+        height: 3rem;
+
+        @media (min-width: $breakpoint1000) {
+            height: 5rem;
+        }
+
+    }
+}

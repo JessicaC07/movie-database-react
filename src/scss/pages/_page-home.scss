@@ -174,7 +174,7 @@
 .dropdown {
 
     text-align: right;
-    padding-top: 2rem;
+    padding-top: 1rem;
     padding-right: 2rem;
 
     select {
@@ -184,6 +184,7 @@
         font-size: 0.8rem;
         background-color: transparent;
         color: $textColor;
+        text-align: center;
     }
 
     label {
@@ -193,7 +194,7 @@
     @media (min-width: $breakpoint400) {
         & {
             padding-right: 3.5rem;
-            padding-top: 3.5rem;
+            padding-top: 1.5rem;
         }
 
         & select {
