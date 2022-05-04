@@ -2,8 +2,14 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import SingleMovie from "../components/SingleMovie";
 import { API_KEY } from "../globals/globals";
+import { appTitle } from '../globals/globals';
+
 
 function PageSingleMovie() {
+  
+  useEffect(() => {
+		document.title = `${appTitle} - Individual Movie`;
+	}, []);
 
   const [movieData, setMovieData] = useState(false);
   const [error, setError] = useState(false);

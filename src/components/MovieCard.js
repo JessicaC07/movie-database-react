@@ -2,10 +2,24 @@
 import noPoster from '../media/no-movie-poster.jpg';
 import likeIcon from '../media/like-icon.png';
 import { Link } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { addFav, deleteFav } from '../features/favs/favsSlice';
+import FavButton from '../components/FavButton';
 
-function MovieCard({movie}) {
+
+function MovieCard({movie, isFav}) {
+
+    const dispatch = useDispatch();
 
     const numberCharacter = 180;
+
+    function handleFavClick(addToFav, obj){
+        if(addToFav === true){
+            dispatch(addFav(obj));
+        }else{
+            dispatch(deleteFav(obj));
+        }   
+    }
 
     function movieOverview(movieOverview){
         if (movieOverview.length > numberCharacter) {
@@ -29,7 +43,10 @@ function MovieCard({movie}) {
 
                 <div className="top-text-container">
                     <div className="top-card">
-                        <img className='like-icon' src={likeIcon} alt="like icon with hear shape" />
+                        {isFav ? 
+                        <FavButton movie={movie} remove={true} handleFavClick={handleFavClick} /> : 
+                        <FavButton movie={movie} handleFavClick={handleFavClick} />
+                        }   
                         <p className="rating">{movie.vote_average}/10</p>
                     </div>
                     

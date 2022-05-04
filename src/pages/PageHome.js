@@ -2,8 +2,14 @@ import MovieCard from "../components/MovieCard";
 import { useEffect, useState } from 'react';
 import {API_KEY } from '../globals/globals';
 import { appTitle } from "../globals/globals";
+import isFav from '../utilities/isFav';
+import { useSelector } from 'react-redux';
+
+
 
 function PageHome() {
+
+	const favs = useSelector((state) => state.favs.items);
 
     useEffect(() => {
         document.title = `${appTitle} - Home`;
@@ -50,10 +56,12 @@ function PageHome() {
             <div className="grid">
                 {/* (moviesToDisplay !== false) && > no need as start with [] */}
                 {
-                    moviesToDisplay.map(movieFromArray => <MovieCard key={movieFromArray.id} movie={movieFromArray} />)
+                    moviesToDisplay.map(movieFromArray => <MovieCard key={movieFromArray.id} movie={movieFromArray} 
+                        isFav={isFav(favs, null, movieFromArray.id)} />)
                 }
             </div>
         </div>
     )
 }
 export default PageHome
+
