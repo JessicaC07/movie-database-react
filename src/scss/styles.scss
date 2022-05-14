@@ -10,6 +10,7 @@
 
 @use './pages/favourites';
 @use './pages/page-home';
+@use './pages/page-about';
 
 body {
     background-color: $backgroundColor;

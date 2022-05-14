@@ -19,9 +19,9 @@ function PageFavourites() {
         <div className="favourite-content">
             {favs.length < 1 ?
                 <>
-                <h1>You don't have any movies in your favourites.</h1>
+                <h1 className="no-movies-title">You don't have any movies in your favourites.</h1>
                 <p>To add movies to your favourites, click <img src={likeIcon} alt="like icon with a heart shape"/> on the movie cards.</p>
-                <p><Link to="/">Browse Movies</Link></p> </> :
+                <p className="browse-movies"><Link to="/">Browse Movies</Link></p> </> :
 
                 <div className="grid">
                     {favs.map(movieFromArray => {

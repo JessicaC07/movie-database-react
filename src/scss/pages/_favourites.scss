@@ -2,7 +2,7 @@
 
 .favourite-content{
 
-    padding: 2rem;
+    // padding: 2rem;
 
     h1, p {
         text-align: center;
@@ -12,7 +12,7 @@
         line-height: 1.5rem;
     }
     
-    h1 {
+    .no-movies-title {
         text-shadow: 1px 1px 2px $accentColor;
     }
 
@@ -22,9 +22,15 @@
        
     }
 
+    .browse-movies a {
+        text-decoration: none;
+        color: $textColor;
+        border: 1px solid $accentColor;
+        padding: .5rem 1rem;
+    }
 
-    @media (min-width: $breakpoint520) {
-        padding: 3.5rem;
+    .browse-movies {
+        margin: 3rem;
     }
         
 }

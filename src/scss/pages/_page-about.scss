@@ -1,0 +1,31 @@
+@use '../variables' as *;
+
+.about-blurb {
+    text-align: center;
+    padding: 0 2rem;
+    
+    h1 {
+        margin: 4rem 0;
+    }
+
+    img {
+        height: 6rem;
+        margin: 3rem 0;
+    }
+
+    @media (min-width: $breakpoint520) {
+        padding: 3.5rem;
+
+        h1 {
+            margin: 2rem 0;
+        }
+    }
+
+    @media (min-width: $breakpoint1000) {
+        padding: 5rem;
+
+        h1 {
+            margin-top: 0;
+        }
+    }
+}
