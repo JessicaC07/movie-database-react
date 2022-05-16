@@ -5,7 +5,7 @@
 
     position: relative;
     // width: 100%;
-    max-width: 43.75rem;
+    // max-width: 43.75rem;
     margin: 2rem auto;
     // border: 5px solid white;
     padding: 2rem ;
@@ -18,8 +18,9 @@
     }
 
     .single-movie-poster {
-        width: 70%;
+        width: 60%;
         margin: 0 auto;
+        padding-bottom: 2rem;
     }
 
     .single-movie-backdrop {
@@ -42,14 +43,71 @@
         font-size: 0.9rem;
     }
 
-    @media (min-width: 600px){
-        display: flex;
+    @media (min-width: 800px){
 
         .single-movie-poster {
-            flex: 0 0 200px;
-            margin-right: 20px;
+            flex: 0 0 250px;
+
         }
 
+        h2 {
+            font-size: 2rem;
+            text-align: left;
+            margin-top: 0.5rem;
+        }
+
+        .single-movie-info-container {
+            display: flex;
+            flex-direction:row-reverse ;
+            align-items: center;
+            max-width: 1000px;
+            padding: 2rem;
+        }
+
+        .single-movie-poster {
+            padding-bottom: 0;
+        }
+
+        .single-movie-info {
+            align-self: flex-start;
+            // max-width: 400px;
+            margin-left: 3rem;
+        }
+
+    }
+
+    @media (min-width: 900px){
+        .single-movie-poster {
+            flex: 0 0 300px;
+
+        }
+
+        .single-movie-info {
+            margin-left: 4rem;
+        }
+
+        h2 {
+            text-align: left;
+        }
+    }
+
+    @media (min-width: 1100px){
+        .single-movie-poster {
+            flex: 0 0 350px;
+
+        }
+        .single-movie-info {
+            margin-left: 5rem;
+        }
+
+        p {
+            font-size: 1rem;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            text-align: left;
+        }
     }
 
 }
@@ -58,7 +116,7 @@
     position: relative;
     width: 75%;
     max-width: 700px;
-    // margin: 0 auto;
+    margin: 0 auto;
     padding: 0 2rem;
     // border: 1px solid ;
     border-radius: 20px;
@@ -70,6 +128,7 @@
         display: inline-block;
         margin-bottom: 0;
     }
+    
 }
 
 .info-top {

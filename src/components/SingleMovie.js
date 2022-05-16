@@ -19,7 +19,7 @@ function SingleMovie({ movie }) {
                 </div>
                 <h2>{movie.title}</h2>
                 <p>{movie.overview}</p>
-                <p>{movie.genres.map(genre => <span key={genre.id}>Genres: {genre.name} </span>)}</p>
+                <p>Genres:{movie.genres.map(genre => <span key={genre.id}> {genre.name} </span>)}</p>
             </div>
             <div className='single-movie-poster'>
                 {movie.poster_path === null ?
