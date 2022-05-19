@@ -35,9 +35,10 @@ function SingleMovie({ movie }) {
                     <p className="rating">{movie.vote_average}/10</p>
                 </div>
                 <div className="favourite">
-                  {isFav(favs, null, movie.id) ? 
-                  <FavButton movie={movie} remove={true} handleFavClick={handleFavClick} /> : 
-                  <FavButton movie={movie} handleFavClick={handleFavClick} />
+                  {
+                    isFav(favs, null, movie.id) ? 
+                        <FavButton movie={movie} remove={true} handleFavClick={handleFavClick} /> : 
+                        <FavButton movie={movie} handleFavClick={handleFavClick} />
                   } 
                 </div>
                 <h2>{movie.title}</h2>
@@ -45,9 +46,11 @@ function SingleMovie({ movie }) {
                 <p>Genres:{movie.genres.map(genre => <span key={genre.id}> {genre.name} </span>)}</p>
             </div>
             <div className='single-movie-poster'>
-                {movie.poster_path === null ?
-                            <img src={noPoster} alt="no poster available"/> :
-                            <img src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`} alt={movie.title}/> }
+                {
+                    movie.poster_path === null ?
+                        <img src={noPoster} alt="no poster available"/> :
+                        <img src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`} alt={movie.title}/> 
+                }
             </div>
         </div>
       </>

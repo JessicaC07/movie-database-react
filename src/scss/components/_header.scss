@@ -1,8 +1,6 @@
 @use "../variables" as *;
 
-
 header {
-    
     padding: 2rem;
     display: flex;
     align-items: center;
@@ -25,6 +23,5 @@ header {
         @media (min-width: $breakpoint1000) {
             height: 5rem;
         }
-
     }
 }

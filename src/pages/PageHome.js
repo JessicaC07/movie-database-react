@@ -5,8 +5,6 @@ import { appTitle } from "../globals/globals";
 import isFav from '../utilities/isFav';
 import { useSelector } from 'react-redux';
 
-
-
 function PageHome() {
 
 	const favs = useSelector((state) => state.favs.items);

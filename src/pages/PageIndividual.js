@@ -46,8 +46,7 @@ function PageSingleMovie() {
 
   fetchMovie()
 
-
-  }, []);
+  }, [id, movieData, error]);
 
   return (
     <section className='single-movie-container'>

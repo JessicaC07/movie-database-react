@@ -1,6 +1,5 @@
 // import placeholder from '../media/placeholder-movie.jpeg';
 import noPoster from '../media/no-movie-poster.jpg';
-import likeIcon from '../media/like-icon.png';
 import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { addFav, deleteFav } from '../features/favs/favsSlice';
