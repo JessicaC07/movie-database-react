@@ -9,7 +9,7 @@ import PageIndividual from '../pages/PageIndividual';
 
 function AppRouter() {
     return (
-        <BrowserRouter>
+        <BrowserRouter basename="/react-movie-database">
             <Header />
             <main>
                 <Routes>
