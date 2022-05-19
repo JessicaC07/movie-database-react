@@ -4,12 +4,16 @@
 .single-movie-container {
 
     position: relative;
-    // width: 100%;
-    // max-width: 43.75rem;
-    margin: 2rem auto;
-    // border: 5px solid white;
-    padding: 2rem ;
+    padding: 3rem ;
     background-color: rgba(black, 0.6);
+    
+    .favourite .like-icon {
+        height: 1.5rem;
+        width: 1.5rem;
+        cursor: pointer;
+        float: right;
+        margin-top: 1.5rem;
+    }
 
     .single-movie-poster,
     .single-movie-info {
@@ -70,16 +74,13 @@
 
         .single-movie-info {
             align-self: flex-start;
-            // max-width: 400px;
             margin-left: 3rem;
         }
-
     }
 
     @media (min-width: 900px){
         .single-movie-poster {
             flex: 0 0 300px;
-
         }
 
         .single-movie-info {
@@ -94,7 +95,6 @@
     @media (min-width: 1100px){
         .single-movie-poster {
             flex: 0 0 350px;
-
         }
         .single-movie-info {
             margin-left: 5rem;
@@ -109,7 +109,6 @@
             text-align: left;
         }
     }
-
 }
 
 .single-movie-info-container {
@@ -118,7 +117,6 @@
     max-width: 700px;
     margin: 0 auto;
     padding: 0 2rem;
-    // border: 1px solid ;
     border-radius: 20px;
     background-color: #2E3544;
 
@@ -127,8 +125,7 @@
         padding: .1rem .4rem;
         display: inline-block;
         margin-bottom: 0;
-    }
-    
+    } 
 }
 
 .info-top {
@@ -150,5 +147,4 @@
         color: $textColor;
         text-decoration: none;
     }
-    
 }
