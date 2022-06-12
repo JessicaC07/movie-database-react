@@ -50,7 +50,10 @@
 
         .single-movie-poster {
             flex: 0 0 250px;
+        }
 
+        .info-top {
+            padding-top: 0;
         }
 
         h2 {
@@ -62,7 +65,7 @@
         .single-movie-info-container {
             display: flex;
             flex-direction:row-reverse ;
-            align-items: center;
+            align-items: flex-start;
             max-width: 1000px;
             padding: 2rem;
         }
@@ -123,27 +126,30 @@
         border: 1px solid $textColor;
         padding: .1rem .4rem;
         display: inline-block;
-        margin-bottom: 0;
+        margin: 0;
     } 
 }
 
 .info-top {
     display: flex;
     justify-content: space-between;
-
-    p.rating {
-        height: 0%;
-    }
+    align-items: flex-start;
+    padding-top: 1rem;
 
     button {
         border: none;
         background: transparent;
-        margin-top: 1rem;
-        height: 0%;
+        text-decoration: underline;
     }
 
     a {
         color: $textColor;
         text-decoration: none;
+    }
+
+    .rating-like {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 }

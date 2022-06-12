@@ -31,15 +31,17 @@ function SingleMovie({ movie }) {
         <div className="single-movie-info-container">
             <div className="single-movie-info">
                 <div className="info-top">
-                    <button><Link to={`/`}>X</Link></button>
-                    <p className="rating">{movie.vote_average}/10</p>
-                </div>
-                <div className="favourite">
-                  {
-                    isFav(favs, null, movie.id) ? 
-                        <FavButton movie={movie} remove={true} handleFavClick={handleFavClick} /> : 
-                        <FavButton movie={movie} handleFavClick={handleFavClick} />
-                  } 
+                    <div className="rating-like">
+                        <p className="rating">{movie.vote_average}/10</p>
+                        <div className="favourite">
+                        {
+                            isFav(favs, null, movie.id) ? 
+                                <FavButton movie={movie} remove={true} handleFavClick={handleFavClick} /> : 
+                                <FavButton movie={movie} handleFavClick={handleFavClick} />
+                        } 
+                        </div>
+                    </div>
+                    <button><Link to={`/`}>CLOSE</Link></button>
                 </div>
                 <h2>{movie.title}</h2>
                 <p>{movie.overview}</p>
