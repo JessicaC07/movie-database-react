@@ -17,6 +17,7 @@ function PageHome() {
     const [moviesToDisplay, setMoviesToDisplay] = useState([]);
     const [filter, setFilter] = useState('popular');
 
+    // load the movies
     useEffect(() => {
         const fetchMovies = async () => {
             
