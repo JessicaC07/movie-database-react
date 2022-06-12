@@ -1,7 +1,10 @@
 import { createSlice } from '@reduxjs/toolkit';
 
+const savedFavourites = localStorage.getItem("favourites");
+const initialValue = JSON.parse(savedFavourites);
+
 const initialState = {
-  items: []
+  items: initialValue || []
 }
 
 function getIndex(item, arr){
@@ -19,15 +22,17 @@ export const favsSlice = createSlice({
       // which detects changes to a "draft state" and produces a brand new
       // immutable state based off those changes
       state.items = newFavs;
+      localStorage.setItem("favourites", JSON.stringify(newFavs));
     },
     deleteFav: (state, action) => {
-      const itemsCopy = state.items;
-      itemsCopy.splice(getIndex(action.payload, state.items), 1);
+      const newFavs = state.items;
+      newFavs.splice(getIndex(action.payload, state.items), 1);
       // Redux Toolkit allows us to write "mutating" logic in reducers. It
       // doesn't actually mutate the state because it uses the Immer library,
       // which detects changes to a "draft state" and produces a brand new
       // immutable state based off those changes
-      state.items = itemsCopy;
+      state.items = newFavs;
+      localStorage.setItem("favourites", JSON.stringify(newFavs));
     }
   },
 });
